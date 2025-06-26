@@ -30,13 +30,12 @@ function renderizarLista() {
             li.classList.add('comprado');
         }
 
-        li.innerHTML = `
-            ${item.nome} - R$ ${item.preco.toFixed(2)}
-            <div class="botoes">
-                <button onclick="toggleComprado(${index})">✔️</button>
-                <button onclick="removerItem(${index})">🗑️</button>
-            </div>
-        `;
+        li.innerHTML = 
+        `${item.nome} - R$ ${item.preco.toFixed(2)}
+        <div class="botoes">
+        <button onclick="toggleComprado(${index})">✔️</button>
+        <button onclick="removerItem(${index})">🗑️</button>
+        </div>`;
 
         listaCompras.appendChild(li);
     });
